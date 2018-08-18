@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>REGISTRATION</title>
+  <link rel="icon" href="IMAGES/logo.png" type="image/gif" sizes="20x20">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="CSS/login.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+
+
+  <style>
+ .hero_image {
+    background: url(IMAGES/shuttle.jpg) no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+
+  </style>
+</head>
+<body class="hero_image" style="position: relative;">
+  
+
+  <div class="login-box">
+    <h1>REGISTER</h1>
+    
+    <div class="textbox">
+        <i class="fa fa-user" aria-hidden="true"></i>
+        <input type="text" name="" placeholder="Enter your First name" style="color: white" maxlength="15" autofocus
+        id="fname" required>
+    </div>
+
+    <div class="textbox">
+        <i class="fa fa-user" aria-hidden="true"></i>
+        <input type="text" name="" placeholder="Enter Last name" style="color: white" maxlength="15"
+        id="lname" required>
+    </div>
+
+    <div class="textbox">
+        <i class="fa fa-home" aria-hidden="true"></i>
+        <input type="text" name="" placeholder="Enter your City " style="color: white" maxlength="15"
+        id="usercity" required>
+    </div>
+
+
+    <div class="textbox">
+        <i class="fa fa-user" aria-hidden="true"></i>
+        <input type="email" name="" placeholder="Enter your Email ID" style="color: white"
+        id="email_field" required>
+    </div> 
+
+     <div class="textbox">
+            <i class="fa fa-lock" aria-hidden="true"></i>
+        <input type="password" name="" placeholder="Password" style="color: white"
+        id="pass" required>
+    </div>
+
+    <input type="button" name="" class="btn1" value="Sign Up" style="width: 100%;	background: none;
+    border: 2px solid #4caf50;"
+    id="btnRegister">
+  </div>
+
+  <script src="Javascript/register.js"></script>
+
+
+
+</body>
+</html>
+

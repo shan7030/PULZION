@@ -1,0 +1,54 @@
+@import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+
+
+.login-box{
+	width: 450px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	color: white;
+}
+.login-box h1{
+	float: left;
+	font-size: 40px;
+	border-bottom: 6px solid #4caf50;
+	margin-bottom: 50px;
+	padding: 13px 0;
+
+}
+.textbox{
+	width: 100%;
+	overflow: hidden;
+	font-size: 20px;
+	padding: 8px 0;
+	margin: 8px 0;
+	border-bottom: 1px solid  #4caf50;
+}
+
+.textbox i {
+	width: 26px;
+	float: left;
+	text-align: center;
+}
+.textbox input{
+	border: none;
+	outline: none;
+	background: none;
+	color: whiye;
+	font-size: 18px;
+	float: left;
+	width: 80%;
+	margin: 0 10px;
+}
+
+.btn1{
+	width: 100%;
+	background: none;
+	border: 2px solid #4caf50;
+	color: white;
+	padding: 5px;
+	font-size: 20px;
+	cursor: pointer;
+	margin: 12px 0;
+}

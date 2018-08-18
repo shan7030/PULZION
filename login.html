@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>LOGIN</title>
+  <link rel="icon" href="IMAGES/logo.png" type="image/gif" sizes="20x20">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="CSS/login.css">
+  <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="CSS/bookcss.css">
+
+ 
+  <style>
+ .hero_image {
+    background: url(IMAGES/shuttle.jpg) no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+
+  </style>
+</head>
+<body >
+  
+  <div  class="hero_image" style="position: relative;" id="loginpage">
+      <nav class="navbar navbar-default navbar-fixed-top">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+              </button>
+              <a class="navbar-brand" href="index.html">INDIAN SPACE ORGANISATION</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="#about">ABOUT US</a></li>
+                <li><a href="waytomars.html">WAY TO MARS</a></li>
+                
+                <li><a href="book.html" >BOOK TICKETS</a></li>
+                <li><a href="index.html#contact">CONTACT US</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="register.html" class="btn btn-danger"><span class="glyphicon glyphicon-user"></span > Register</a></li>
+
+              
+        </ul>
+        </div>
+        </div>
+        </nav>
+            
+
+
+
+  <div class="login-box">
+    <h1>LOGIN</h1>
+
+    <div class="textbox">
+        <i class="fa fa-user" aria-hidden="true"></i>
+        <input type="email" name="" placeholder="Email" style="color: white" autofocus id="email_field">
+    </div>
+
+     <div class="textbox">
+            <i class="fa fa-lock" aria-hidden="true"></i>
+        <input type="password" name="" placeholder="Password" style="color: white" id="pass">
+    </div>
+
+    <input type="button" name="" class="btn1" value="Sign In" id="btnLogin" style="width: 100%;	background: none;
+    border: 2px solid #4caf50;">
+
+    <div><strong>Dont' have an account yet ?<span><a href="register.html" style="color:#79CDCD"> Register first</a></span></strong></div>
+
+  </div>
+</div>
+<!-- Book ticket after login-->
+<div id="bookp">
+<div  id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+    
+    <nav class="navbar navbar-default navbar-fixed-top">
+
+                 <button class="btn btn-info" id="btnLogout">LOGOUT</button>
+    </nav>    
+    <div id="tour" class="bg-1">
+      <div class="container">
+        <h3 class="text-center">TOUR DETAILS AND DATES</h3>
+        <p class="text-center">Make your jounery comfortable with us.<br> Remember to book your tickets!</p>
+        <ul class="list-group">
+          <li class="list-group-item">November<span class="label label-success">Avialable</span> <span class="badge">3 slots available</span></li> 
+        </ul>
+        
+        <div class="row text-center">
+          <div class="col-sm-4">
+            <div class="thumbnail">
+              <img class="zoom" src="IMAGES/shri.jpg" alt="Paris" width="400" height="300">
+              <p><strong>Departure Place:SHRIHARIKOTA<br>Astronaut:Shantanu Joshi</strong></p>
+              <p>Friday 27 November 2018</p>
+              <a class="btn btn-info" href="#myModal" style="max-width:40%;" >Buy Tickets</a>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="thumbnail">
+              <img src="IMAGES/shri.jpg" class="zoom" alt="New York" width="400" height="300">
+              <p><strong>Departure Place :SHRIHARIKOTA <br>Astronaut:Suraj Vyavahare</strong></p>
+              <p>Saturday 28 November 2018</p>
+              <a class="btn btn-info" href="#myModal" style="max-width:40%;" >Buy Tickets</a>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="thumbnail">
+              <img class="zoom" src="IMAGES/shri.jpg" t="San Francisco" width="400" height="300">
+              <p><strong>Departure Place :SHRIHARIKOTA<br>Astronaut:Nitish Shinde</strong></p>
+              <p>Sunday 29 November 2018</p>
+              <a class="btn btn-info" href="#myModal" style="max-width:40%;" >Buy Tickets</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+      <div class="container" id="user-info">
+            <h3 class="text-center">User Information</h3>
+            <br>
+          <div class="well" id="name" style="background-color:#262626 ;color:white"></div>
+          <div class="well" id="mail" style="background-color:#262626 ;color:white"></div>
+          <div class="well" id="usercity" style="background-color:#262626 ;color:white"></div> 
+          <div class="well" id="loc" style="background-color:#262626 ;color:white"></div>
+          <div class="well"id="ticket" style="background-color:#262626 ;color:white"></div>
+       </div>
+      
+        
+
+        <div class="container" id="myModal">
+        
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4> Tickets</h4>
+            </div>
+            <div class="modal-body">
+                  <label  style="color: black"> Tickets :(2 Lakh per ticket)</label>
+                  <input type="text" class="form-control" id="noOfTickets" placeholder="click outside after giving no of tickets ">
+
+                  <label style="color: black" > Total Price :</label>
+                  <p id="price" style="color: black" > </p>
+
+                   <button  class="btn btn-info" id="pay">Pay</button>           
+
+                </div>
+                     
+                  </div>
+            </div>
+      
+            <div class="modal-footer">
+             
+    
+           </div>
+          </div>
+        </div>
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    
+    <footer class="text-center">
+      <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+        <span class="glyphicon glyphicon-chevron-up"></span>
+      </a><br><br>
+                 
+              
+      <p><strong>This is an official website of Indian Space Organization </strong></p> 
+    </footer>
+    </div>
+  </div>
+
+
+
+
+  <script src="Javascript/login.js"></script>
+
+
+</body>
+</html> 
